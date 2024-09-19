@@ -1,0 +1,201 @@
+/* Resetting margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2.0;
+    color: #333;
+}
+
+/* Header styling with background image */
+header {
+    background-image: url('images/background.jpg'); /* Path to your image */
+    background-size: cover;  /* Ensures the image covers the entire header */
+    background-position: center;  /* Center the image */
+    padding: 20px 0;
+    position: relative; /* Ensure header becomes the reference for absolute positioning */
+    text-align: center; /* Center the heading in the header */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(18, 58, 59, 0.7);  /* Cadet Blue with 70% transparency */
+    z-index: 1;  /* Place it above the image */
+}
+
+header h1,
+header .since,
+.header-nav {
+    position: relative;
+    z-index: 2;  /* Ensure the text and navigation are on top of the overlay */
+}
+
+header h1 {
+    font-family: 'Arial Black', cursive, sans-serif;  /* Arial Black font */
+    font-size: 5.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: radial-gradient(circle at 10% 20%, rgb(224, 154, 68) 30%, transparent 30%) 10px 10px,
+                radial-gradient(circle at 50% 50%, rgb(226, 139, 63) 30%, transparent 30%) 40px 40px,
+                radial-gradient(circle at 80% 80%, rgb(171, 134, 11) 10%, transparent 30%) 70px 70px,
+                #dcaa5e; /* Yellow base color */
+    -webkit-background-clip: text;  /* Clip the background to the text */
+    background-clip: text;
+    color: transparent;  /* Make the text color transparent to show the pattern */
+    background-size: 100px 100px;  /* Control the size of the pattern */
+}
+
+.since {
+    font-family: 'Cambria Math', cursive, sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #b5651d;
+    font-weight: bold;
+}
+
+/* Header navigation in the upper right corner */
+.header-nav {
+    position: absolute;
+    top: 20px;           /* Align with the top padding of the header */
+    right: 20px;         /* Align with the right edge of the header */
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;           /* Space between menu items */
+}
+
+.header-nav ul li {
+    display: inline;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-nav ul li a:hover {
+    color: #b5651d;  /* Hover color */
+}
+
+/* Title Section with the subtitle "The Authentic Taste of Tamil Nadu" */
+.title-section h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;  /* Comic Sans MS font */
+    font-size: 3.5rem;                                  /* Increased size */
+    color: #a77549;                                     /* Bakery-themed color */
+    text-align: center;                                 /* Centered text */
+    font-weight: bold;                                  /* Bold text */
+    margin-top: 20px;
+}
+
+.featured-items {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.featured-items h2 {
+    color: #b5651d; /* Match the bakery theme */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.item-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+}
+
+.item {
+    flex: 1 1 30%; /* Adjust width and allow wrapping */
+    max-width: 300px; /* Control the maximum width of items */
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+
+.item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.item p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(99, 150, 152);
+}
+
+.about-us h2 {
+    color: #b5651d;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #ffcc99;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer a:hover {
+    color: #b5651d;
+}
+
+/* New Menu Button Section */
+.menu-button-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Match the background color with other sections */
+}
+
+.menu-button {
+    display: inline-block;
+    background-color: #b5651d; /* Bakery theme color */
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-button:hover {
+    background-color: #a0522d; /* Darker shade on hover */
+}
